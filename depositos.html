@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registro de Clientes</title>
+    <style>
+        /* estilos CSS para el formulario */
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+  
+        input[type="text"] {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+  
+        select {
+          padding: 5px;
+          margin-bottom: 10px;
+        }
+  
+        button {
+          padding: 5px;
+          margin-right: 10px;
+        }
+  
+        #clientes {
+          margin-top: 20px;
+        }
+  
+        /* estilos CSS para la tabla de clientes */
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+  
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+  
+        th {
+          background-color: #333;
+          color: white;
+        }
+  
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+  
+        .eliminar {
+          background-color: #f44336;
+          color: white;
+        }
+      </style>
+  </head>
+  <body>
+    <h2>Registro de Clientes</h2>
+    <form id="formulario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" required>
+      <label for="tipo">Tipo:</label>
+      <select id="tipo" name="tipo">
+        <option value="Particular">Particular</option>
+        <option value="Empresa">Empresa</option>
+      </select>
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" required>
+      <br>
+      <button type="submit" id="agregar">Agregar</button>
+    </form>
+    <div id="clientes">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Tipo</th>
+            <th>Teléfono</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tabla">
+        </tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
