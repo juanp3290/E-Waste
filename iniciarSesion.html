@@ -18,36 +18,46 @@
     <div class="contact-middle" id="formulario">
         <div class="section-header text-center pb-60">
             <h2 class="f2 c1">E-WASTE</h2>
-            <h1 class="f1 fw-7 c4">Formulario de contacto para asignación de citas</h1>
+            <h1 class="f1 fw-7 c4">Ingreso de Depositos</h1>
         </div>
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-offset-0">
-                    <form onsubmit="return validar()" method="post">
-                        <label for="usuario">Usuario:</label>
-                        <input type="text" id="usuario" name="usuario"><br>
-                        <label for="contraseña">Contraseña:</label>
-                        <input type="password" id="contraseña" name="contraseña"><br>
+                    <form id="login-form" action="#" method="post">
+                        <label for="username">Usuario:</label>
+                        <input type="text" id="username" name="username" required>
                         <br>
-                        <input type="submit" class="thm-btn hvr-1 bg3 c4" value="Iniciar sesión">
-                    </form>
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
+                        <br>
+                        <button type="submit"class="col-md-8 col-md-offset-2 col-sm-offset-0 thm-btn hvr-1 bg3 c4">Iniciar Sesión</button>
+                      </form>
                 </div>
             </div>
         </div>
     </div>
 	<script>
-		function validar() {
-			var usuario = document.getElementById("usuario").value;
-			var contraseña = document.getElementById("contraseña").value;
-			if (usuario == "admin" && contraseña == "admin") {
-                location.href = "depositos.html";  
-                        
-				return true;
-			} else {
-				alert("Usuario o contraseña incorrectos");
-				return false;
-			}
-		}
-	</script>
+		// función para validar el formulario
+        function validarFormulario(event) {
+        event.preventDefault(); // prevenir el comportamiento predeterminado del formulario
+
+        // obtener los valores del formulario
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // validar los valores
+        if (username === '1' && password === '1') {
+          // si el usuario y la contraseña son correctos, redirigir a la página de bienvenida
+          window.location.href = 'depositos.html';
+        } else {
+          // si el usuario o la contraseña son incorrectos, mostrar un mensaje de error
+          alert('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');
+        }
+      }
+      // agregar un controlador de eventos para el envío del formulario
+      const form = document.getElementById('login-form');
+      form.addEventListener('submit', validarFormulario);
+    </script>
+	
 </body>
 </html>
