@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>Login ||E-Waste</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- ====== main style start ====== -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/effect.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+</head>
+<body>
 
+    <div class="contact-middle" id="formulario">
+        <div class="section-header text-center pb-60">
+            <h2 class="f2 c1">E-WASTE</h2>
+            <h1 class="f1 fw-7 c4">Formulario de contacto para asignación de citas</h1>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-sm-offset-0">
+                    <form onsubmit="return validar()" method="post">
+                        <label for="usuario">Usuario:</label>
+                        <input type="text" id="usuario" name="usuario"><br>
+                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" id="contraseña" name="contraseña"><br>
+                        <br>
+                        <input type="submit" class="thm-btn hvr-1 bg3 c4" value="Iniciar sesión">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script>
+		function validar() {
+			var usuario = document.getElementById("usuario").value;
+			var contraseña = document.getElementById("contraseña").value;
+			if (usuario == "admin" && contraseña == "admin") {
+                location.href = "depositos.html";  
+                        
+				return true;
+			} else {
+				alert("Usuario o contraseña incorrectos");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
