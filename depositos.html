@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <title>Registro de Clientes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- ====== main style start ====== -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/effect.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!-- ====== main style end ====== -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
     <style>
         /* estilos CSS para el formulario */
         label {
@@ -55,25 +70,42 @@
       </style>
   </head>
   <body>
-    <h2>Registro de depositos</h2>
-    <form id="formulario">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
-      <label for="direccion">Dirección:</label>
-      <input type="text" id="direccion" name="direccion" required>
-      <label for="tipo">Tipo:</label>
-      <select id="tipo" name="tipo">
-        <option value="Vidrio">Vidrio</option>
-        <option value="Plastico">Plastico</option>
-        <option value="Paladio">Paladio</option>
-        <option value="Plomo">Plomo</option>
-        <option value="MtaFerroso">metales ferrosos</option>
-      </select>
-      <label for="telefono">Teléfono:</label>
-      <input type="text" id="telefono" name="telefono" required>
-      <br>
-      <button type="submit" id="agregar">Agregar</button>
-    </form>
+
+    
+    <div class="container mt-5">
+      <h2>Registro de depositos</h2>
+      <div class="row">
+          <div class="col-md-8 col-md-offset-2 col-sm-offset-0">
+            <form id="formulario">
+              <div class="row">
+              <div class="col-md-6 mb-30">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+              <div class="col-md-6 mb-30">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+              </div>
+              <div class="col-md-6 bg-2 mb-30"></div>
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" name="tipo">
+                  <option value="Vidrio">Vidrio</option>
+                  <option value="Plastico">Plastico</option>
+                  <option value="Paladio">Paladio</option>
+                  <option value="Plomo">Plomo</option>
+                  <option value="MtaFerroso">metales ferrosos</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-30">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+              </div>
+              <button type="submit" id="agregar"class="thm-btn hvr-2 bg3 c4">Agregar</button>
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
     <div id="clientes">
       <table>
         <thead>
